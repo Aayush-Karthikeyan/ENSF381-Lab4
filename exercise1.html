@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Lab4 - Exercise 1</title>
+  </head>
+
+<body>
+
+  <input type="text" id="textInput" placeholder="Type something here..."/>
+  <label id="textLabel"></label>
+  <button id="redButton" style="color:red;">Red</button>
+  <button id="blueButton" style="color:blue;">Blue</button>
+  <button id="greenButton" style="color:green;">Green</button>
+  <button id="orangeButton" style="color:orange;">Orange</button>
+  <button id="purpleButton" style="color:purple;">Purple</button>
+
+  <script type="text/javascript">
+    const textInput = document.getElementById('textInput');
+    const textLabel = document.getElementById('textLabel');
+
+    // When Enter is pressed, display text in label and clear the textbox
+    textInput.addEventListener('keypress', (event) => {
+      if (event.key === 'Enter') {
+        textLabel.textContent = textInput.value;
+        textInput.value = '';
+      }
+    });
+
+    // Color buttons change the label's font color
+    document.getElementById('redButton').addEventListener('click', () => {
+      textLabel.style.color = 'red';
+    });
+
+    document.getElementById('blueButton').addEventListener('click', () => {
+      textLabel.style.color = 'blue';
+    });
+
+    document.getElementById('greenButton').addEventListener('click', () => {
+      textLabel.style.color = 'green';
+    });
+
+    document.getElementById('orangeButton').addEventListener('click', () => {
+      textLabel.style.color = 'orange';
+    });
+
+    document.getElementById('purpleButton').addEventListener('click', () => {
+      textLabel.style.color = 'purple';
+    });
+  </script>
+</body>
+
+</html>
